@@ -1,0 +1,31 @@
+
+<html>
+<head>
+<link href ="./custom.css" rel="stylesheet">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+
+<div class="container">
+  <div class="row justify-content-center">
+    <h1 class="display-1"><p id="MEAT_UP" class="text-success"></p></h1>
+  </div>
+</div>
+
+  <script>
+  var countDownDate = new Date("Oct 12, 2019 00:00:00").getTime();
+  var x = setInterval(function() {
+    var now = new Date().getTime();
+    var distance = countDownDate - now;
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    document.getElementById("MEAT_UP").innerHTML = days + "d " + hours + "h "
+    + minutes + "m " + seconds + "s ";
+  }, 1000);
+  </script>
+  
+</body>
+</html>
